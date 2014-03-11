@@ -1,7 +1,8 @@
+;name impkiller
+;author Schwarz, Christian
 ;assert 1
 
-start:	MOV	0,	@3
-	ADD	#1,	2
-	DJN	#5,	-1
-	DAT	#0,	#1
+org start
+
+start:	mov	#2,	
 	end
