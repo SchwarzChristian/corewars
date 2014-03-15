@@ -1,24 +1,24 @@
-;name impkiller mt
+;name impkiller
 ;author Railion
 ;strategy impkiller
-;strategy multithreated imp killer
+;strategy observe a point and bomb a point behind several times 
+;strategy if watched point was modified
 ;assert 1
 
-	org	begin
+	org	start
+
 watch	dat.f	#0,	#0
 
-for	20
+for	5
 	dat.f	#0,	#0
 rof
 
-begin	spl	start,	#0
-	jmp	0,	#0
 start	sne.ab	#0,	watch
 	jmp.b	start,	#0
 
 bomb
-i	for	5
-	mov.i	data,	watch + 5 + i
+for	5
+	mov.i	data,	watch + 5
 rof
 
 	mov.i	data,	watch		;reset watch point
